@@ -1,0 +1,116 @@
+/* ===== newtab.css ===== */
+/* (C) 2023 AlexTEC */
+
+/* ==== RESET BEGIN ==== */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {margin:0; padding:0; border:0; font: inherit; vertical-align:baseline}
+a {text-decoration: none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block}
+body {line-height:1; font-family: 'Outfit', sans-serif;}
+ol,ul {list-style:none}
+blockquote,q {quotes:none}
+blockquote:before,blockquote:after,q:before,q:after {content:''; content:none}
+table {border-collapse:collapse; border-spacing:0}
+/* ==== RESET END ==== */
+
+/* ==== COLORS ==== */
+:root {
+    --black: #000000;
+    --darkgray: #3a3a3a;
+    --white: #ffffff;
+    --lightgray: #c5c5c5;
+    --readerbg: #D4D4D4;
+    --readerbg-dark: #1a1a1a;
+    --transparent: #00000000;
+    --warning: #f8ff9c;
+    --codeblock-green: #b9ca4a;
+    --codeblock-red: #ca4a4a;
+    --codeblock-yellow: #caa84a;
+    --codeblock-purple: #bb4aca;
+    --codeblock-blue: #4acabf;
+    --codeblock-gray: #a8a8a8;
+    --accent-color: #ff62ff;
+    --red: #ff9c9c;
+}
+::selection {color: var(--black); background-color: var(--accent-color);}
+::-moz-selection {color: var(--black); background-color: var(--accent-color);}
+.accent-color {color: var(--accent-color);}
+.white {color: var(--white);}
+.lightgray {color: var(--lightgray);}
+.reader {background-color: var(--readerbg);}
+.reader-dark {background-color: var(--readerbg-dark);}
+.darkgray {color: var(--darkgray);}
+.black {color: var(--black);}
+.bg-header {background-color: #282a36;}
+.bg-transparent {background-color: var(--transparent);}
+.warning {color: var(--warning);}
+.red {color: var(--red);}
+
+/* ==== FONTS ==== */
+@font-face {font-family: 'IBM Plex Mono'; src: url('../fonts/IBMPlexMono-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal;} /* Bold */
+@font-face {font-family: 'IBM Plex Mono'; src: url('../fonts/IBMPlexMono-BoldItalic.ttf') format('truetype'); font-weight: 700; font-style: italic;} /* BoldItalic */
+@font-face {font-family: 'IBM Plex Mono'; src: url('../fonts/IBMPlexMono-ExtraLight.ttf') format('truetype'); font-weight: 200; font-style: normal;} /* ExtraLight */
+@font-face {font-family: 'IBM Plex Mono'; src: url('../fonts/IBMPlexMono-ExtraLightItalic.ttf') format('truetype'); font-weight: 200; font-style: italic;} /* ExtraLightItalic */
+@font-face {font-family: 'IBM Plex Mono'; src: url('../fonts/IBMPlexMono-Light.ttf') format('truetype'); font-weight: 300; font-style: normal;} /* Light */
+@font-face {font-family: 'IBM Plex Mono'; src: url('../fonts/IBMPlexMono-LightItalic.ttf') format('truetype'); font-weight: 300; font-style: italic;} /* LightItalic */
+@font-face {font-family: 'IBM Plex Mono'; src: url('../fonts/IBMPlexMono-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal;} /* Medium */
+@font-face {font-family: 'IBM Plex Mono'; src: url('../fonts/IBMPlexMono-MediumItalic.ttf') format('truetype'); font-weight: 500; font-style: italic;} /* MediumItalic */
+@font-face {font-family: 'IBM Plex Mono'; src: url('../fonts/IBMPlexMono-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal;} /* Regular */
+@font-face {font-family: 'IBM Plex Mono'; src: url('../fonts/IBMPlexMono-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic;} /* RegularItalic */
+@font-face {font-family: 'IBM Plex Mono'; src: url('../fonts/IBMPlexMono-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal;} /* SemiBold */
+@font-face {font-family: 'IBM Plex Mono'; src: url('../fonts/IBMPlexMono-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: italic;} /* SemiBoldItalic */
+@font-face {font-family: 'IBM Plex Mono'; src: url('../fonts/IBMPlexMono-Thin.ttf') format('truetype'); font-weight: 100; font-style: normal;} /* Thin */
+@font-face {font-family: 'IBM Plex Mono'; src: url('../fonts/IBMPlexMono-ThinItalic.ttf') format('truetype'); font-weight: 100; font-style: italic;} /* ThinItalic */
+
+.monospace {font-family: 'IBM Plex Mono';}
+.italic {font-style: italic !important;}
+.oblique {font-style: oblique !important;}
+.underline {text-decoration: underline !important;}
+.overline {text-decoration: overline !important;}
+.wavy {text-decoration: wavy !important;}
+.dashed {text-decoration: dashed !important;}
+.dotted {text-decoration: dotted !important;}
+.thin {font-weight: 300 !important;}
+.regular {font-weight: 400 !important;}
+.medium {font-weight: 500 !important;}
+.semibold {font-weight: 600 !important;}
+.bold {font-weight: 700 !important;}
+.centered {justify-content: center !important;}
+.rem0-5 {font-size: 0.5rem !important;}
+.rem0-75 {font-size: 0.75rem !important;}
+.rem1 {font-size: 1rem !important;}
+.rem1-15 {font-size: 1.15rem !important;}
+.rem1-5 {font-size: 1.5rem !important;}
+.rem2 {font-size: 2rem !important;}
+.rem2-5 {font-size: 2.5rem !important;}
+.rem3 {font-size: 3rem !important;}
+.rem3-5 {font-size: 3.5rem !important;}
+.rem4 {font-size: 4rem !important;}
+.rem4-5 {font-size: 4.5rem !important;}
+.rem5 {font-size: 5rem !important;}
+.ltr {direction: ltr !important;}
+.rtl {direction: rtl !important;}
+
+/* ==== NEWTAB ==== */
+.header-wrap {transition: 0.4s; overflow: hidden; padding: 0rem; display: inline-flex; align-items: center; justify-content: center; position: fixed; top: 0; z-index: 11;}
+.header {transition: 0.4s; text-rendering: optimizeLegibility; font-size: 2.25rem;  display: inline-flex; flex-direction: row; align-items: center; justify-content: space-between; z-index: 10; position: sticky; width: 100%;}
+.header-left {transition: 0.4s; padding-left: 1rem; display: inline-flex; justify-content: flex-start; flex-direction: row; flex-wrap: nowrap; align-content: center; align-items: center;}
+.header-branding {transition: 0.4s; display: flex; flex-direction: row; align-items: center; justify-content: center;}
+.header-branding:hover, .header-logo:hover {transition: 0.4s; opacity: 80%; color: var(--white);}
+.header-logo {width: 2.75rem; height: 2.75rem; transition: 0.4s; display: flex; align-items: center; transition: transform 0.3s ease-in-out; transform: translate(0, 0); display: block; max-width: 100%; height: auto; margin: 0.1rem; opacity: 100%;}
+.header-logo:hover {transition: 0.4s;opacity: 80%;}
+.logo-sticky {position: fixed; padding: 0rem; top: 1.5rem; left: 4.2rem; transition: transform 0.3s ease-in-out; transform: translate(-100%, 100%);}
+.recommendations-container {display: flex; padding: 0.5rem; justify-content: center; flex-direction: column;}
+.recommendations-double {display: flex; flex-direction: row;}
+.recommendation {display: block; border: 0.2rem solid var(--white); transition: 0.3s; padding: 0.25rem; margin: 0.25rem;}
+.recommendation:hover {border: 0.2rem solid var(--accent-color); transition: 0.3s;}
+.recommendation-text {padding: 0.5rem; margin: 0rem; transition: 0.3s;}
+.recommendation-text:hover {transition: 0.3s; color: var(--white);}
+.post-header {display: flex; align-items: center;}
+.post-content {padding: 1.5rem; display: flex; flex-direction: column; align-items: stretch;}
+.bookmarks-container {display: flex; padding: 0.5rem; justify-content: center; flex-direction: column; margin: 2rem;}
+.bookmark-row {display: flex; justify-content: center; flex-direction:row;}
+.bookmark {display: block; border: 0.2rem solid var(--white); transition: 0.3s; padding: 0.25rem; margin: 0.25rem;}
+.bookmark:hover {border: 0.2rem solid var(--accent-color); transition: 0.3s;}
+.bookmark-icon {padding: 0.5rem; margin: 0rem; transition: 0.3s; width: 1.5rem; height: 1.5rem;}
+.bookmark-icon:hover {transition: 0.3s; opacity: 50%;}
+
